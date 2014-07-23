@@ -3,6 +3,13 @@
     {
       name: "StopLight Todo Demo App",
       documentation: "https://github.com/marbemac/stoplight-todos",
+      todoModel: {
+        name: "String",
+        completed: "Boolean",
+        completedAt: "Time",
+        createdAt: "Time",
+        updatedAt: "Time"
+      },
       endpoints: {
         GET:    "/todos",
         GET:    "/todos/{id}",
