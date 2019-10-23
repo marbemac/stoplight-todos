@@ -107,11 +107,11 @@ PLATFORMS
 DEPENDENCIES
   jbuilder (~> 2.0)
   newrelic_rpm
-  pg
+  pg (= 1.1.4)
   rack-cors
   rails (= 4.2.11)
   spring
-  sqlite3
+  sqlite3 (= 1.4.1)
 
 RUBY VERSION
    ruby 2.4.9p362
