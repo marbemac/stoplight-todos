@@ -8,14 +8,10 @@ Bundler.require(*Rails.groups)
 
 module Todos
   class Application < Rails::Application
-    config.middleware.insert_before 0, "Rack::Cors", :debug => true, :logger => (-> { Rails.logger }) do
+    config.middleware.insert_before 0, "Rack::Cors", :logger => (-> { Rails.logger }) do
       allow do
         origins '*'
-
-        resource '*',
-          :headers => :any,
-          :methods => [:get, :post, :delete, :put, :patch, :options, :head],
-          :max_age => 0
+        resource '*', headers: :any, methods: :any
       end
     end
   end
